@@ -1,1 +1,16 @@
-print("Welcome To The Automation World!!")
+name: Run Python Script
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Script
+        run: python3 app.py
